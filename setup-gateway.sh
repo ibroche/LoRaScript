@@ -24,6 +24,7 @@ if ! command -v docker compose &> /dev/null; then
     curl -SL https://github.com/docker/compose/releases/download/v2.24.2/docker-compose-linux-armv7 -o $DOCKER_CONFIG/cli-plugins/docker-compose
     chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
     echo "✅ Docker Compose installé (v2)"
+    sudo ln -s $HOME/.docker/cli-plugins/docker-compose /usr/local/bin/docker-compose
 fi
 
 
